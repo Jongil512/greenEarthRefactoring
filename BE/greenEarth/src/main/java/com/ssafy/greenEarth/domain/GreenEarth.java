@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "green_earth")
-public class GreenEarth {
+public class GreenEarth extends BaseTimeEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
