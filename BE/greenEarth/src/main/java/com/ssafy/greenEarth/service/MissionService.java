@@ -1,8 +1,11 @@
 package com.ssafy.greenEarth.service;
 
 import com.ssafy.greenEarth.domain.*;
-import com.ssafy.greenEarth.dto.Member.ChildProfileDto;
-import com.ssafy.greenEarth.dto.Mission.*;
+import com.ssafy.greenEarth.dto.Mission.MissionLogResDto;
+import com.ssafy.greenEarth.dto.Mission.MissionPutDto;
+import com.ssafy.greenEarth.dto.Mission.MissionReqDto;
+import com.ssafy.greenEarth.dto.Mission.MissionResDto;
+import com.ssafy.greenEarth.exception.BusinessException;
 import com.ssafy.greenEarth.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +17,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.ssafy.greenEarth.exception.BusinessException;
 import static com.ssafy.greenEarth.exception.ErrorCode.*;
 
 @Slf4j
@@ -52,7 +54,7 @@ public class MissionService {
                 () -> new BusinessException(NOT_EXIST_ACCOUNT)
         );
 
-        MissionLog missionlog = new MissionLog(child, mission, parent, LocalDateTime.now());
+        MissionLog missionlog = new MissionLog(child, mission, parent);
         missionLogRepository.save(missionlog);
         return getTodayMissionLogs(childId);
     }
