@@ -2,7 +2,7 @@ package com.ssafy.greenEarth.controller;
 
 import com.ssafy.greenEarth.dto.Game.MileageAddReqDto;
 import com.ssafy.greenEarth.dto.Mission.MissionLogResDto;
-import com.ssafy.greenEarth.repository.GreenEarthRepository;
+import com.ssafy.greenEarth.repository.greenEarthRepo.GreenEarthRepository;
 import com.ssafy.greenEarth.service.MissionService;
 import com.ssafy.greenEarth.service.TestService;
 import io.swagger.annotations.Api;

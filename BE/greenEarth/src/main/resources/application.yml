@@ -10,6 +10,7 @@ spring:
     password: Whddlf11028@
 
   jpa:
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: none
       naming:
