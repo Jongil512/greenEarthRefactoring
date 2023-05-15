@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "green_earth_logs")
-public class GreenEarthLog {
+public class GreenEarthLog extends CreatedTimeEntity{
 
     @EmbeddedId
     private GreenEarthLogId id;

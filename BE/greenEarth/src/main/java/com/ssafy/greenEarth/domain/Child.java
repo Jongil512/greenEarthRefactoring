@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "children")
-public class Child {
+public class Child extends BaseTimeEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -82,7 +82,7 @@ public class Child {
     }
 
     @Builder
-    public Child(String realName, String email, String password, Gender gender, String nickname,
+    public Child(String realName, String password, Gender gender, String nickname,
                  int mileage, int clearedMission, int earthLevel, LocalDate birthday, int avatar,
                  Role role, Parent parent) {
         this.realName = realName;
