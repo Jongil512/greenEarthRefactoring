@@ -2,12 +2,14 @@ package com.ssafy.greenEarth.dto.Member;
 
 import com.ssafy.greenEarth.domain.Parent;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Data
+@Getter
+@NoArgsConstructor
 public class ParentProfileDto {
 
     @Schema(description = "보호자 PK")

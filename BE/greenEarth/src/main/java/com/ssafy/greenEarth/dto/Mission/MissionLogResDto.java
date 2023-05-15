@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ssafy.greenEarth.domain.Mission;
 import com.ssafy.greenEarth.domain.MissionLog;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@NoArgsConstructor
 public class MissionLogResDto {
 
     @Schema(description = "미션 로그 PK")
@@ -32,14 +34,6 @@ public class MissionLogResDto {
 
     @Schema(description = "미션 수행하는 아이")
     private int child_id;
-
-    public void setClearedAt(LocalDateTime clearedAt) {
-        this.clearedAt = clearedAt;
-    }
-
-    public void setPermitted(boolean permitted) {
-        isPermitted = permitted;
-    }
 
     public MissionLogResDto(MissionLog missionLog) {
         this.id = missionLog.getId();

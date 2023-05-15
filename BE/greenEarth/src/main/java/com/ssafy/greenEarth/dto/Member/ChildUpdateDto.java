@@ -1,11 +1,11 @@
 package com.ssafy.greenEarth.dto.Member;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
 
 import javax.validation.constraints.NotBlank;
 
-@Data
+@Getter
 public class ChildUpdateDto {
 
     @NotBlank(message = "닉네임을 입력해주세요")
