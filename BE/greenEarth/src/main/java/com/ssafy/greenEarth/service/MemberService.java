@@ -2,8 +2,8 @@ package com.ssafy.greenEarth.service;
 
 import com.ssafy.greenEarth.domain.*;
 import com.ssafy.greenEarth.dto.Member.*;
-import com.ssafy.greenEarth.repository.ChildRepository;
-import com.ssafy.greenEarth.repository.ParentRepository;
+import com.ssafy.greenEarth.repository.childRepo.ChildRepository;
+import com.ssafy.greenEarth.repository.parentRepo.ParentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
