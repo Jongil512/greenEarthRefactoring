@@ -3,12 +3,14 @@ package com.ssafy.greenEarth.dto.Member;
 import com.ssafy.greenEarth.domain.Parent;
 import com.ssafy.greenEarth.domain.Role;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
+@AllArgsConstructor
 public class ParentRegisterDto {
 
     @NotBlank(message = "보호자 이메일을 입력해주세요")
