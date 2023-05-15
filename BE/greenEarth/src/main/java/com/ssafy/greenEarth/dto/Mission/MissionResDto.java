@@ -2,12 +2,11 @@ package com.ssafy.greenEarth.dto.Mission;
 
 import com.ssafy.greenEarth.domain.Mission;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
-@Data
+@Getter
+@NoArgsConstructor
 public class MissionResDto {
 
     @Schema(description = "미션 PK")

@@ -1,11 +1,11 @@
 package com.ssafy.greenEarth.dto.Mission;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
 
 import javax.validation.constraints.NotNull;
 
-@Data
+@Getter
 public class MissionPutDto {
 
     @NotNull(message = "mission_id를 입력해주세요")

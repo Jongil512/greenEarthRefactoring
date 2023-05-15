@@ -1,8 +1,6 @@
 package com.ssafy.greenEarth.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +10,6 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 @Table(name = "mission_logs")
 public class MissionLog extends CreatedTimeEntity {
 
@@ -25,15 +22,11 @@ public class MissionLog extends CreatedTimeEntity {
 
     private boolean isPermitted;
 
-//    @CreatedDate
-//    private LocalDateTime createdAt;
-
     @Column(length = 25)
     private String parentNickname;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mission_id")
-    @JsonBackReference
     private Mission mission;
 
     @ManyToOne(fetch = FetchType.LAZY)

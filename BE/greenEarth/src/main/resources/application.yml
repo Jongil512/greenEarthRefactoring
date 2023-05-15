@@ -1,17 +1,15 @@
 server:
-  port: 8881
   servlet:
     context-Path: /api
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://k7d206.p.ssafy.io:8888/greenearth?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost/greenEarthRefactor?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
-    password: Ssafyd206@
+    password: Whddlf11028@
 
   jpa:
-    defer-datasource-initialization: true
     hibernate:
       ddl-auto: none
       naming:

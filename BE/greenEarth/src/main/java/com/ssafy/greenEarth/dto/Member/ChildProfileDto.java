@@ -3,13 +3,13 @@ package com.ssafy.greenEarth.dto.Member;
 import com.ssafy.greenEarth.domain.Child;
 import com.ssafy.greenEarth.domain.Gender;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
-@Data
+@Getter
+@NoArgsConstructor
 public class ChildProfileDto {
 
     @Schema(description = "아이 PK")

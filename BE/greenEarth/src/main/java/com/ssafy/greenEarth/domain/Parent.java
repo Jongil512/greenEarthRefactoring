@@ -1,6 +1,5 @@
 package com.ssafy.greenEarth.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -30,7 +29,6 @@ public class Parent extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @JsonBackReference
     @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
     private final List<Child> childList = new ArrayList<>();
 

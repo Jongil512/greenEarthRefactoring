@@ -1,6 +1,5 @@
 package com.ssafy.greenEarth.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -54,11 +53,9 @@ public class Child extends BaseTimeEntity{
     private Parent parent;
 
     @OneToMany(mappedBy = "child", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonBackReference
     private final List<MissionLog> missionLogList = new ArrayList<>();
 
     @OneToMany(mappedBy = "child", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonBackReference
     private final List<Reward> rewardList = new ArrayList<>();
 
     public void setNickname(String nickname) {

@@ -5,8 +5,7 @@ import com.ssafy.greenEarth.domain.Gender;
 import com.ssafy.greenEarth.domain.Parent;
 import com.ssafy.greenEarth.domain.Role;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -14,8 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
-@Data
-@NoArgsConstructor
+@Getter
 public class ChildRegisterDto {
 
     @NotBlank(message = "아이 비밀번호를 입력해주세요")
